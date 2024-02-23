@@ -5,4 +5,4 @@ declare module '*.scss' {
     const classNames: IClassNames;
     export = classNames;
 }
-declare type TNullable<T>=T|null
+declare type TNullable<T>=T|null    

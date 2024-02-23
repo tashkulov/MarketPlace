@@ -5,33 +5,38 @@ import { getProductList, IProduct, productSelectors } from "../../../entities/Pr
 import { ProductCard } from "../../../features/ProductCard";
 import { ProductFavorite } from "../../../features/ProductFavorite";
 import { ProductList } from "../../../features/ProductList";
+import { ProductSearch } from "../../../features/ProductSearch";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 const ProductListPage = () => {
     const dispatch=useAppDispatch();
     const isLoading=useSelector(productSelectors.getProductListIsLoading);
     const list =useSelector(productSelectors.getProductListData);
+
     useEffect(()=>{
         dispatch(getProductList());
     },[dispatch]);
     return (
+        <>
+            <ProductSearch/>
+            <ProductList
 
-        <ProductList 
+                isLoading={isLoading}
 
-            isLoading={isLoading}
+                list={list}
 
-            list={list}
+                render={(item:IProduct)=>(
 
-            render={(item:IProduct)=>(
-                
-                <ProductCard
-                    item={item}
-                    withFavorite={<ProductFavorite
-                        id={item.id}/>}
-                />
-                
-            )}
-        />
+                    <ProductCard
+                        item={item}
+                        withFavorite={<ProductFavorite
+                            id={item.id}/>}
+                    />
+
+                )}
+            />
+        </>
+     
     );
 };
 
