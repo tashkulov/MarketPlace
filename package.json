@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@headlessui/react": "^1.7.18",
+=======
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
     "@reduxjs/toolkit": "^2.1.0",
     "axios": "^1.6.7",
     "i18next": "^21.6.11",
@@ -39,6 +42,10 @@
   "scripts": {
     "start:app": "react-scripts start",
     "start:server": "node ./json-server/index.js",
+<<<<<<< HEAD
+=======
+    "start": "react-scripts start",
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

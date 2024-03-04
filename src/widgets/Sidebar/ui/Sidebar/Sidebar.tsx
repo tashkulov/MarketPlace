@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useCallback, useMemo, useState } from 'react';
 import { CgProfile } from  "react-icons/cg";
 import { IoLogoNpm } from "react-icons/io";
@@ -46,6 +47,40 @@ const Sidebar = () => {
                     <SidebarItem
                         className={cls.item}
                         isCollapsed={isCollapsed}
+=======
+import React, { useMemo, useState } from 'react';
+import { useTranslation } from "react-i18next";
+import { IoLogoNpm , IoMdArrowDroprightCircle  , IoMdArrowDropleftCircle } from "react-icons/io";
+
+import cls from "./Sidebar.module.scss";
+import { classNames } from "../../../../shared/lib/classNames/classNames";
+import { LangSwitcher } from "../../../LangSwitcher";
+import { ThemeSwitcher } from "../../../ThemeSwitcher";
+import { getSidebaritems } from "../../model/selectors/getSidebaritems";
+import SidebarItem from "../SidebarItem/SidebarItem";
+
+
+const Sidebar = () => {
+    const  [isCollapset,setIsCollapset]=useState<boolean>(false);
+    const toggle=()=>{
+        setIsCollapset(prev=>!prev);
+    };
+    const { t }=useTranslation();
+    const  items=useMemo(()=>getSidebaritems(),[]);
+    return (
+        <aside className={classNames(cls.Sidebar,{ [cls.collapsed]:  isCollapset })}>
+            <div className={cls.logo}>
+                <IoLogoNpm  size={60}/>
+
+
+            </div>
+            <nav className={cls.list}>
+                {items.map((item)=>(
+
+                    <SidebarItem
+                        className={cls.item}
+                        isCollapsed={isCollapset}
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
                         key={item.href}
                         item={item}
                     />
@@ -55,6 +90,7 @@ const Sidebar = () => {
                 className={cls.collapsedBtn}
                 onClick={toggle}
             >
+<<<<<<< HEAD
                 {isCollapsed ? ">" : "<"}
             </div>
             <div className={cls.switchers}>
@@ -62,6 +98,20 @@ const Sidebar = () => {
                 <ThemeSwitcher isCollapsed={isCollapsed}/>
             </div>
         </aside>
+=======
+                {isCollapset ?
+                    <IoMdArrowDroprightCircle size={30} />
+
+                    : <IoMdArrowDropleftCircle size={30}/>
+                }
+            </div>
+            <div className={cls.switchers}>
+                <LangSwitcher isCollapsed={isCollapset}/>
+                <ThemeSwitcher isCollapsed={isCollapset}/>
+            </div>
+        </aside>
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
     );
 };
 

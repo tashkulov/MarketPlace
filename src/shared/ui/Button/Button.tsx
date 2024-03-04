@@ -69,8 +69,11 @@ export const Button = forwardRef(
             [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
         };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
         return (
             <button
                 type="button"

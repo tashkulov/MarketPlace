@@ -3,15 +3,19 @@
 @import "themes/dark";
 @import "themes/light";
 
+<<<<<<< HEAD
 body{
   overflow: hidden;
 }
+=======
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 .app {
   background: var(--bg);
   min-height: 100vh;
   font: var(--font-m);
   color: var(--text);
 }
+<<<<<<< HEAD
 
 .content_page {
   display: flex;
@@ -22,4 +26,12 @@ body{
   flex-grow: 1;
   max-height: 100%;
   overflow-x: scroll;
+=======
+.content-page{
+  display: flex;
+}
+.content{
+  padding: 20px;
+  flex-grow: 1;
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 }

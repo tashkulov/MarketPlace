@@ -53,4 +53,6 @@ const ProductFavorite = (props: { id: number }) => {
     return null;
 };
 
+
+
 export default memo(ProductFavorite);

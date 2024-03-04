@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 import React, {
     InputHTMLAttributes,
     memo,
@@ -99,4 +103,8 @@ export const Input = memo((props: InputProps) => {
     );
 
     return input;
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b

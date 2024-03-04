@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Sidebar {
   height: 100vh;
   background: var(--light-bg);
@@ -54,4 +55,55 @@
   display: flex;
   justify-content: center;
 
+=======
+.Sidebar{
+  height: 100vh;
+  background: var(--light-bg);
+  position: relative;
+  min-width: var(--sidebar-width);
+  transition: .7s min-width;
+}
+.switchers{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.collapsed{
+  min-width: var(--sidebar-collabsed-width);
+
+
+  .switchers{
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+}
+.collapsedBtn{
+  position: absolute;
+  cursor: pointer;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo{
+  display: flex;
+  justify-content: center;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 10px;
+}
+.item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 }

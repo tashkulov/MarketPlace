@@ -11,6 +11,10 @@ const root = ReactDOM.createRoot(
 );
 
 root.render( 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
     <StoreProvider>
         <BrowserRouter>
             <ThemeProvider>
@@ -18,5 +22,9 @@ root.render(
             </ThemeProvider>
         </BrowserRouter>
     </StoreProvider>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 );
 

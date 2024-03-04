@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 
+<<<<<<< HEAD
 import cls from './ProductInfo.module.scss';
 import { IProduct } from "../../../entities/Product";
 import { classNames } from "../../../shared/lib/classNames/classNames";
@@ -29,6 +30,29 @@ const ProductInfo = (props: IProductInfoProps) => {
                 <img src={product.images[0]} alt=""/>
             </div>
             <div className={cls.rightSide}>
+=======
+import cls from "./ProductInfo.module.scss";
+import { IProduct } from "../../../entities/Product";
+import { classNames } from "../../../shared/lib/classNames/classNames";
+import { getProductInfoMapper } from "../lib";
+
+
+interface  IProductInfoProps{
+    product:IProduct;
+}
+const ProductInfo = (props:IProductInfoProps) => {
+    const { product }=props;
+    
+    const data=useMemo(()=>getProductInfoMapper(product),[product]);
+    return (
+        <div className={classNames(cls.ProductInfo)}>
+           
+            <div className={classNames(cls.leftSide)}>
+                <img src={product.images[0]} alt="" />
+            </div>
+            <div className={cls.rightSide}>
+                
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
                 <span className={cls.title}>
                     {product.title}
                 </span>
@@ -36,6 +60,10 @@ const ProductInfo = (props: IProductInfoProps) => {
                     {product.description}
                 </p>
                 <ul>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
                     {data.map(([key, value]) => (
                         <li>
                             <span className={cls.key}>
@@ -48,6 +76,10 @@ const ProductInfo = (props: IProductInfoProps) => {
                     ))}
                 </ul>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
         </div>
     );
 };

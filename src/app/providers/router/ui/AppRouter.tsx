@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useCallback } from 'react';
 import { Route, Routes } from "react-router-dom";
 
@@ -24,4 +25,28 @@ const AppRouter = () => {
     );
 };
 
+=======
+import React, { useCallback } from 'react';
+import { Route, Routes } from "react-router-dom";
+
+import { AppRouteProps, routerConfig } from "../config/routerConfig";
+
+const AppRouter = () => {
+
+    const render=useCallback((route:AppRouteProps)=>{
+        return(
+            <Route
+                path={route.path}
+                element={route.element}/>
+        );
+    },[]);
+    const div = <div>
+        <Routes>
+            {Object.values(routerConfig).map(render)}
+        </Routes>
+    </div>;
+    return div;
+};
+
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
 export default AppRouter;

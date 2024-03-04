@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .AppLink {
   color: var(--primary-color);
 
@@ -17,3 +18,25 @@
 .red {
   color: red;
 }
+=======
+
+.AppLink {
+  color: var(--primary-color);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--inverted-primary-color);
+}
+
+.red {
+  color: red;
+}
+>>>>>>> 46824f00109fcc4a3266d54303d7ebca15a53a3b
